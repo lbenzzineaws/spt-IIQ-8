@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE sailpoint PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<sailpoint>
+<TaskSchedule name="Check sunset requests for notifications daily" nextExecution="1569214800000">
+  <Arguments>
+    <Map>
+      <entry key="executor" value="Check Sunset Requests"/>
+      <entry key="nextActualFireTime" value="1569214800000"/>
+    </Map>
+  </Arguments>
+  <CronExpressions>
+    <String>0 0 0 * * ?</String>
+  </CronExpressions>
+  <Description>Check for Roles and Entitlements that are about to expire and send a notification every day at midnight</Description>
+</TaskSchedule>
+<TaskSchedule name="Check expired work items daily" nextExecution="1569214800000">
+  <Arguments>
+    <Map>
+      <entry key="executor" value="Check Expired Work Items"/>
+      <entry key="nextActualFireTime" value="1569214800000"/>
+    </Map>
+  </Arguments>
+  <CronExpressions>
+    <String>0 0 0 * * ?</String>
+  </CronExpressions>
+  <Description>Check for expired work items every day at midnight.</Description>
+</TaskSchedule>
+<TaskSchedule lastExecution="1569212100000" name="Perform maintenance" nextExecution="1569212400000">
+  <Arguments>
+    <Map>
+      <entry key="executor" value="Perform Maintenance"/>
+      <entry key="nextActualFireTime" value="1569212400000"/>
+    </Map>
+  </Arguments>
+  <CronExpressions>
+    <String>0 0/5 * * * ?</String>
+  </CronExpressions>
+  <Description>Perform maintenance every five minutes.</Description>
+</TaskSchedule>
+<TaskSchedule name="Perform Identity Request Maintenance" nextExecution="1569222000000">
+  <Arguments>
+    <Map>
+      <entry key="executor" value="Perform Identity Request Maintenance"/>
+      <entry key="nextActualFireTime" value="1569222000000"/>
+    </Map>
+  </Arguments>
+  <CronExpressions>
+    <String>0 0 2 * * ?</String>
+  </CronExpressions>
+  <Description>Perform Identity Request maintenance every day at 2 AM.</Description>
+</TaskSchedule>
+<TaskSchedule name="Check expired mitigations daily" nextExecution="1569214800000">
+  <Arguments>
+    <Map>
+      <entry key="executor" value="Check Expired Mitigations"/>
+      <entry key="nextActualFireTime" value="1569214800000"/>
+    </Map>
+  </Arguments>
+  <CronExpressions>
+    <String>0 0 0 * * ?</String>
+  </CronExpressions>
+  <Description>Check for expired mitigations every day at midnight.</Description>
+</TaskSchedule>
+</sailpoint>
